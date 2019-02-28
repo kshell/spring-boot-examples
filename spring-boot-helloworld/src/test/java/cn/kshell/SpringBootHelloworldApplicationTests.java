@@ -13,6 +13,8 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -29,6 +31,7 @@ public class SpringBootHelloworldApplicationTests {
     @Test
     public void testHello() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
-               .andExpect(status().isOk()) ;
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Hello World!")));
     }
 }
