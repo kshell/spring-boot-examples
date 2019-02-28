@@ -29,6 +29,6 @@ public class SpringBootHelloworldApplicationTests {
     @Test
     public void testHello() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
-               .andExpect(status().isFound()) ;
+               .andExpect(status().isOk()) ;
     }
 }
