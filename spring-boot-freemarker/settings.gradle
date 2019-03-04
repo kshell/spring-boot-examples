@@ -3,4 +3,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'spring-boot-freemaker'
+rootProject.name = 'spring-boot-freemarker'
