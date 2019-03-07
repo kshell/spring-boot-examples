@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class IndexController {
 
@@ -21,6 +24,19 @@ public class IndexController {
         Product product = new Product("green mouse", "products/greenmouse.html");
         model.addAttribute(user);
         model.addAttribute(product);
+
+        List<User> users = new ArrayList<>();
+        users.add(user);
+        user = new User("weihua", "123456");
+        users.add(user);
+        user = new User("孔垂湮", "123456");
+        users.add(user);
+        user = new User("孔垂桐", "12345678");
+        users.add(user);
+        model.addAttribute("users", users);
+        List<Product> products = new ArrayList<>();
+        model.addAttribute("ps", products);
+        products.add(product);
         return "user";
     }
 }

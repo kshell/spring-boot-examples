@@ -9,6 +9,12 @@
 <p>Our latest product:
     <a href="${product.url}">${product.name}</a>!
 <hr/>
-${user.name}
+<#list users as u>
+    ${u.name}<br/>
+</#list>
+
+<#list ps as p>
+    ${p.name}
+</#list>
 </body>
 </html>
