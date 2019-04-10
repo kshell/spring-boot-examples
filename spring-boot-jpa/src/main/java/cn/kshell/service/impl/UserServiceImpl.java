@@ -49,11 +49,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User remove(Long id) {
-        return findOne(id);
+        return this.remove(this.findOne(id));
     }
 
     @Override
     public User remove(String userName) {
-        return findOne(userName);
+        return this.remove(this.findOne(userName));
     }
 }
