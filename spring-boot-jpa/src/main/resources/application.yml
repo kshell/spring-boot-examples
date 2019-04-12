@@ -18,3 +18,5 @@ spring:
     show-sql: true
   main:
     lazy-initialization: true
+  mvc:
+    static-path-pattern: /static/**

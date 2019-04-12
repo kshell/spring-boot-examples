@@ -7,17 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="author" content="kshell <kshell@aliyun.com>">
-    <link type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
     <title>SpringBoot</title>
 </head>
 <body>
-    <div class="page-header">
-        <h1>SpringBoot
-            <small>管理系统</small>
-        </h1>
-    </div>
 
     <div class="container">
+        <div class="page-header">
+            <h1>SpringBoot
+                <small>管理系统</small>
+            </h1>
+        </div>
         <a href="/user/index">用户管理</a>
     </div>
 </body>
