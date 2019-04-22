@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://mariadb.kshell.cn:3306/springboot
+    username: root
+    password: 123456
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect=org:
+          hibernate:
+            dialect:
+              MySQL5InnoDBDialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+    show-sql: true
+  main:
+    lazy-initialization: true
